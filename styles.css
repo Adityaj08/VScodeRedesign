@@ -809,7 +809,7 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
         overflow: hidden;
     }
     .extension .left .row .extensionWrapper .info span{
-        font-size: 1rem;
+        font-size: 0.5rem;
     }
     .extension .left p{
         display: none;
