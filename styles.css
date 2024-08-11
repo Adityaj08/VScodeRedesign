@@ -734,6 +734,7 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
   and (max-width: 768px){ 
     .hero{
         padding-top: 10rem;
+        padding-bottom: 150px;
         height: 100vh;
         display: flex;
         align-items: center;
