@@ -785,7 +785,7 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
         gap: 1rem;
     }
     .hero .left{
-        padding-left: 20px;
+        margin-left: 20px;
     }
     .hero .right .heroMockUp .copilotUI{
         height: 100px;
