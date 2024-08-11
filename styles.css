@@ -739,6 +739,7 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        overflow-x: hidden;
     }
     .hero .right .heroMockUp{
         height: auto;
@@ -785,7 +786,7 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
         gap: 1rem;
     }
     .hero .left{
-        margin-left: 20px;
+        padding-left: 20px;
     }
     .hero .right .heroMockUp .copilotUI{
         height: 100px;
