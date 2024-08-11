@@ -805,6 +805,7 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
         margin: 30px;
     }
     .extension .left{
+        width:100%;
         margin: 10px auto;
         overflow: hidden;
     }
