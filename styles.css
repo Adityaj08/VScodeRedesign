@@ -115,6 +115,7 @@ header .navbar{
     background: #000;
     display: none;
     cursor: pointer;
+    z-index: 99;
 }
 
 #mobile-navbar-icon{
