@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Studio Code - Redesign</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="preloader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="loader">
+        <div class="square" id="sq1"></div>
+        <div class="square" id="sq2"></div>
+        <div class="square" id="sq3"></div>
+        <div class="square" id="sq4"></div>
+        <div class="square" id="sq5"></div>
+        <div class="square" id="sq6"></div>
+        <div class="square" id="sq7"></div>
+        <div class="square" id="sq8"></div>
+        <div class="square" id="sq9"></div>
+    </div>
+    <div class="background"></div>
+    <header>
+        <div class="logo">
+            <img src="./assets/logo.webp" alt="">
+        </div>
+        <div class="search">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            with X
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="https://code.visualstudio.com/docs" target="_blank">Docs</a></li>
+                <li><a href="https://code.visualstudio.com/updates" target="_blank">Updates</a></li>
+                <li><a href="https://code.visualstudio.com/blogs" target="_blank">Blog</a></li>
+                <li><a href="https://code.visualstudio.com/api" target="_blank">API</a></li>
+                <li><a href="https://marketplace.visualstudio.com/VSCode" target="_blank">Extensions</a></li>
+                <li><a href="https://code.visualstudio.com/docs/supporting/faq" target="_blank">FAQ</a></li>
+            </ul>
+        </nav>
+        <button class="CTA"><span class="material-symbols-outlined">
+                download
+            </span>Download
+        </button>
+    </header>
+    <div class="mobile-navbar-btn" id="button">
+        <i name="bars" class="fa-sharp fa-solid fa-bars" id="mobile-navbar-icon"></i>
+        <i name="cross" class="fa-solid fa-xmark" id="mobile-navbar-icon"></i>
+    </div>
+    <main>
+        <section class="hero" id="hero">
+            <div class="left">
+                <h1>The most used code editor on the planet</h1>
+                <p>Free <span>.</span> Open source <span>.</span> Runs Everywhere</p>
+
+                <button class="CTA"><span class="material-symbols-outlined">
+                        download
+                    </span>Download
+                </button>
+                <p>By using vs code, You agree to its <a href="https://code.visualstudio.com/license" target="_blank">License and Privacy Statement</a></p>
+            </div>
+            <div class="right">
+                <div class="heroMockUp">
+                    <img src="./assets/UI images/homeMockupUI.webp" alt="homeMockUpUI" class="heroMockUpUI">
+                    <img src="./assets/UI images/copilotUI.webp" alt="copilotUI" class="copilotUI">
+                </div>
+            </div>
+    </main>
+    </section>
+    <div class="languageWrapper">
+        <img src="./assets/UI images/Logos.png" alt="" class="list list1">
+        <img src="./assets/UI images/Logos.png" alt="" class="list">
+    </div>
+    <section class="coPilot">
+        <div class="left">
+            <div class="new">
+                <p>New</p>
+            </div>
+            <h1>GitHub Copilot ships with vs code</h1>
+            <p>Debug code right from the editor.
+                Launch or attach to your running apps and debug with break points
+                , call stacks , and an interactive console
+            </p>
+            <button class="learnMore">Learn More ></button>
+        </div>
+        <div class="right">
+            <div class="chat">
+                <span class="userChat">How do I build a container that separates child items by exactly 20px in
+                    CSS</span>
+                <div class="response">
+                    <span>You can use Flexbox for this! Here's the code:</span>
+                    <img src="./assets/Copilot Page Ui/CopilotCodeSnippet.webp" alt="">
+                </div>
+            </div>
+            <div class="fadeBlur">
+                <div class="fade1"></div>
+                <img src="./assets/Copilot Page Ui/CodeSnippet.webp" alt="" class="codeSnippet">
+                <div class="fade2"></div>
+            </div>
+        </div>
+    </section>
+    <section class="productivity">
+        <div class="background"></div>
+        <div class="left">
+            <img src="./assets/Productivity Page/ProductivityCodeSnippet.webp" alt="">
+        </div>
+        <div class="right">
+            <h1>Maximize Productivity</h1>
+            <p>Debug code right from the editor.
+                Launch or attach to your running apps and debug with break points
+                , call stacks , and an interactive console
+            </p>
+            <div class="innerWrapper">
+                <h2>Meet IntelliSense</h2>
+                <p>From deployments to tasks, works with your team every step of the way</p>
+                <a href="">Learn more</a>
+            </div>
+            <div class="innerWrapper">
+                <h2>Embbed Debugging</h2>
+                <p>Debug code right from the editor.
+                    Launch or attach to your running apps and debug with break points
+                    , call stacks , and an interactive console
+                </p>
+                <a href="">Learn more</a>
+            </div>
+        </div>
+    </section>
+    <section class="deployment">
+        <div class="left">
+            <h1>Deployment is easy</h1>
+            <p>There are useful VS Code extensions and tools that can simplify deployment</p>
+            <div class="innerWrapper">
+                <h2>Git commands Built-in</h2>
+                <p>
+                    Working with Git and other SCm providers has never been easier
+                </p>
+                <a href="">Learn more</a>
+            </div>
+            <div class="innerWrapper">
+                <h2>One click Azure integration</h2>
+                <p>
+                    With microsofts Azure you can deploy and host your React, Angular, Vue, Node, Python (and more)
+                    sites
+                </p>
+                <a href="">Learn more</a>
+            </div>
+        </div>
+        <div class="right">
+            <img src="./assets/Development Page/DevelpmentCodeSnippet.webp" alt="">
+        </div>
+    </section>
+    <section class="extension">
+        <div class="left">
+            <div class="row row1">
+                <div class="extensionWrapper">
+                    <div class="logo">
+                        <img src="./assets/extension logos/logoAutoClose.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span>Auto Close</span>
+                        <p>All in one Composer integration, quick actions</p>
+                    </div>
+                </div>
+                <div class="extensionWrapper">
+                    <div class="logo">
+                        <img src="./assets/extension logos/logoPhp.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span>Intelli PHP</span>
+                        <p>All in one Composer integration, quick actions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="extensionWrapper">
+                    <div class="logo">
+                        <img src="./assets/extension logos/logoLaravel.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span>Laravel Extra Intellisence</span>
+                        <p>All in one Composer integration, quick actions</p>
+                    </div>
+                </div>
+                <div class="extensionWrapper">
+                    <div class="logo">
+                        <img src="./assets/extension logos/logoComposer.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span>Composer</span>
+                        <p>All in one Composer integration, quick actions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row row3">
+                <div class="extensionWrapper">
+                    <div class="logo">
+                        <img src="./assets/extension logos/logoPhpProfilier.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span>PHP Profilier</span>
+                        <p>All in one Composer integration, quick actions</p>
+                    </div>
+                </div>
+                <div class="extensionWrapper">
+                    <div class="logo">
+                        <img src="./assets/extension logos/logoDocker.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span>Docker</span>
+                        <p>All in one Composer integration, quick actions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row row4">
+                <div class="extensionWrapper">
+                    <div class="logo">
+                        <img src="./assets/extension logos/logoContainer.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span>Dev container</span>
+                        <p>All in one Composer integration, quick actions</p>
+                    </div>
+                </div>
+                <div class="extensionWrapper">
+                    <div class="logo">
+                        <img src="./assets/extension logos/logoGitLens.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span>Git Lens</span>
+                        <p>All in one Composer integration, quick actions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h1>Customize all you want</h1>
+            <p>There are useful VS Code extensions and tools that can be installed as needed by ypou project</p>
+            <div class="innerWrapper">
+                <h2>Over 69,696+ extensions</h2>
+                <p>
+                    Working with Git and other SCM providers has never been easier
+                </p>
+                <a href="">Learn more</a>
+            </div>
+            <div class="innerWrapper">
+                <h2>Choose your Own Theme</h2>
+                <p>
+                    With vs code's growing user base we added MYT(Make Your Theme),
+                    now you can customize your code theme are share in the community
+                </p>
+                <a href="">Learn more</a>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h1>Loved by developers of all shapes and size</h1>
+        <p>(Even Ctrl+c and Ctrl+v users)</p>
+        <div class="twitts">
+            <div class="col col1">
+                <div class="testimonial">
+                    <p>"Visual Studio Code has revolutionized the way I code.
+                        Its intuitive interface, coupled with a vast array of extensions,
+                        makes it an indispensable tool in my development toolkit.
+                        I can't imagine going back to any other editor."
+                    </p>
+                    <div class="attribution">
+                        <div class="text">
+                            <p>@marcjmcdougall</p>
+                            <span>Full-Stack Developer</span>
+                        </div>
+                        <img src="./assets/avatars/Avatar1.png" alt="" class="avatar">
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Visual Studio Code has revolutionized the way I code.
+                        Its intuitive interface, coupled with a vast array of extensions,
+                        makes it an indispensable tool in my development toolkit.
+                        I can't imagine going back to any other editor."
+                    </p>
+                    <div class="attribution">
+                        <div class="text">
+                            <p>@athom</p>
+                            <span>NodeJS Developer</span>
+                        </div>
+                        <img src="./assets/avatars/Avatar2.png" alt="" class="avatar">
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Visual Studio Code has revolutionized the way I code.
+                        Its intuitive interface, coupled with a vast array of extensions,
+                        makes it an indispensable tool in my development toolkit.
+                        I can't imagine going back to any other editor."
+                    </p>
+                    <div class="attribution">
+                        <div class="text">
+                            <p>@marcjmcdougall</p>
+                            <span>Full-Stack Developer</span>
+                        </div>
+                        <img src="./assets/avatars/Avatar1.png" alt="" class="avatar">
+                    </div>
+                </div>
+            </div>
+            <div class="col col2">
+                <div class="testimonial">
+                    <p>"Visual Studio Code has revolutionized the way I code.
+                        Its intuitive interface, coupled with a vast array of extensions,
+                        makes it an indispensable tool in my development toolkit.
+                        I can't imagine going back to any other editor."
+                    </p>
+                    <div class="attribution">
+                        <div class="text">
+                            <p>@dev4days</p>
+                            <span>MongoDB Developer</span>
+                        </div>
+                        <img src="./assets/avatars/Avatar3.png" alt="" class="avatar">
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Visual Studio Code has revolutionized the way I code.
+                        Its intuitive interface, coupled with a vast array of extensions,
+                        makes it an indispensable tool in my development toolkit.
+                        I can't imagine going back to any other editor."
+                    </p>
+                    <div class="attribution">
+                        <div class="text">
+                            <p>@dillpickledev</p>
+                            <span>Full-Stack Developer</span>
+                        </div>
+                        <img src="./assets/avatars/Avatar4.png" alt="" class="avatar">
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Visual Studio Code has revolutionized the way I code.
+                        Its intuitive interface, coupled with a vast array of extensions,
+                        makes it an indispensable tool in my development toolkit.
+                        I can't imagine going back to any other editor."
+                    </p>
+                    <div class="attribution">
+                        <div class="text">
+                            <p>@marcjmcdougall</p>
+                            <span>Full-Stack Developer</span>
+                        </div>
+                        <img src="./assets/avatars/Avatar3.png" alt="" class="avatar">
+                    </div>
+                </div>
+            </div>
+            <div class="col col3">
+                <div class="testimonial">
+                    <p>"Visual Studio Code has revolutionized the way I code.
+                        Its intuitive interface, coupled with a vast array of extensions,
+                        makes it an indispensable tool in my development toolkit.
+                        I can't imagine going back to any other editor."
+                    </p>
+                    <div class="attribution">
+                        <div class="text">
+                            <p>@doyoulikedev</p>
+                            <span>JS Developer</span>
+                        </div>
+                        <img src="./assets/avatars/Avatar5.png" alt="" class="avatar">
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Visual Studio Code has revolutionized the way I code.
+                        Its intuitive interface, coupled with a vast array of extensions,
+                        makes it an indispensable tool in my development toolkit.
+                        I can't imagine going back to any other editor."
+                    </p>
+                    <div class="attribution">
+                        <div class="text">
+                            <p>@microsimp</p>
+                            <span>Azure Developer</span>
+                        </div>
+                        <img src="./assets/avatars/Avatar6.png" alt="" class="avatar">
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Visual Studio Code has revolutionized the way I code.
+                        Its intuitive interface, coupled with a vast array of extensions,
+                        makes it an indispensable tool in my development toolkit.
+                        I can't imagine going back to any other editor."
+                    </p>
+                    <div class="attribution">
+                        <div class="text">
+                            <p>@marcjmcdougall</p>
+                            <span>Full-Stack Developer</span>
+                        </div>
+                        <img src="./assets/avatars/Avatar5.png" alt="" class="avatar">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="secondaryCTA">
+            <h1>Today can be the best midnight of your (Developers) Life </h1>
+            <button class="secondCTA CTA"><span class="material-symbols-outlined">
+                    download
+                </span>Download Now</button>
+        </div>
+    </section>
+    <footer>
+        <div class="linkWrapper">
+            <div class="logo">
+                <img src="./assets/logo.webp" alt="">
+            </div>
+            <ul>
+                <li>Company</li>
+                <li><a href="">About us</a></li>
+                <li><a href="">The Team</a></li>
+                <li><a href="">RSS Feed</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+            <ul>
+                <li>Media</li>
+                <li><a href="">Press kit</a></li>
+                <li><a href="">Podcasts</a></li>
+                <li><a href="">News Reel</a></li>
+            </ul>
+            <ul>
+                <li>Documentation</li>
+                <li><a href="">Documentation</a></li>
+                <li><a href="">Forum</a></li>
+                <li><a href="">API Library</a></li>
+                <li><a href="">Extention Library</a></li>
+            </ul>
+            <ul>
+                <li>Downloads</li>
+                <li><a href="">Windows</a></li>
+                <li><a href="">Linux</a></li>
+                <li><a href="">Mac OS</a></li>
+            </ul>
+            <ul>
+                <li>Socials</li>
+                <li><a href="https://github.com/Adityaj08/VScodeRedesign" target="_blank">Github</a></li>
+                <li><a href="https://x.com/aditya_avadhoot" target="_blank">Twitter/X</a></li>
+                <li><a href="">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div class="twitter">
+            <p>Made With <i class="fa-solid fa-heart" style="color: red;"></i> By Aditya<span>|</span><i
+                    class="fa-brands fa-twitter"
+                    onclick="window.open('https://twitter.com/aditya_avadhoot','_blank')"></i><i
+                    class="fa-brands fa-x-twitter"
+                    onclick="window.open('https://twitter.com/aditya_avadhoot','_blank')"></i></p>
+        </div>
+        <div class="copyright">
+            <a href="">CopyRight ©2069 Aditya A Joshi.All Rights Reserved</a>
+            <div class="policies">
+                <a href="">Terms and Conditions</a>
+                <span>.</span>
+                <a href="">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://kit.fontawesome.com/ed2808213c.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>

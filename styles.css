@@ -1,0 +1,830 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --background-image: radial-gradient(#2a3038 3px, transparent 3px),
+                        linear-gradient(to right, rgba(42,48,56,0.3) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(42,48,56,0.3) 1px, transparent 1px);
+    --background-size: 40px 40px, 40px 40px, 40px 40px;
+    --background-position: 0 0, 20px 20px, 20px 20px;
+    --primary-color: #0065B8;
+    --secondary: #FFFFFF1A;
+    --background-color: #000A12;
+    ;
+    --faded-white : rgba(255,255,255,0.4);
+}
+
+@keyframes scroll {
+    to {
+        left: -1200px;
+    }
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: "Montserrat", sans-serif;
+}
+
+
+body .background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-image: var(--background-image);
+    background-size: var(--background-size);
+    background-position: var(--background-position);
+    mask-image: radial-gradient(circle at top left,black 20%, rgba(0,0,0,0) 50%);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+}
+header .logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 30px;
+    margin: 0 20px;
+    object-fit: contain;
+}
+header .search{
+    height: 50px;
+    width: 200px;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 15px;
+    margin: 0 20px;
+    font-size: 18px;
+    color: var(--faded-white);
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+header .search .ctrl{
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+header ul{
+    display: flex;
+    gap: 25px;
+    font-size: 20px;
+}
+
+header ul li a{
+    color: #fff;
+    transition: color 300ms ease-in-out;
+}
+header ul li a:hover{
+    color: var(--primary-color)
+}
+
+header .navbar{
+    padding: 0 20px;
+}
+
+.mobile-navbar-btn{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #000;
+    display: none;
+    cursor: pointer;
+}
+
+#mobile-navbar-icon{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    color: #ffffff;
+}
+
+#mobile-navbar-icon[name="cross"]{
+    display: none;
+}
+
+.CTA,.learnMore,.secondCTA{
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
+.hero{
+    height: calc(100vh + 70px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+}
+
+.hero .left{    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 80px;
+    justify-content: center;
+}
+.hero .left h1,.coPilot .left h1,.testimonials h1{
+    padding: 10px 0;
+    font-size: 3.2rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.hero .left p,.coPilot .left p,.productivity .right p,.deployment .left p,.extension .right p , .testimonials p{
+    font-size: 18px;
+    color: var(--faded-white);
+    padding: 0 0 20px 0;
+}
+
+.hero .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .right .heroMockUp{
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero .right .heroMockUp::before{
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: 0;
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    filter: blur(70px);
+    z-index: -1;
+}
+.hero .right .heroMockUp .heroMockUpUI{
+    height: 500px;
+    object-fit: contain;
+}
+.hero .right .heroMockUp .copilotUI{
+    position: absolute;
+    object-fit: contain;
+    bottom: 0;
+    right: -5%;
+    height: 300px;
+}
+
+.languageWrapper{
+    margin: 50px auto;
+    width: 90%;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0),rgba(0,0,0,0.7) 5%,rgba(0,0,0,0.5) 95%,rgba(0,0,0,0));
+}
+.languageWrapper .list{
+    width: 1200px;
+    height: 80px;
+    object-fit: contain;
+    position: absolute;
+    left: 1300px;
+    animation: scroll 30s linear infinite;
+}
+
+.languageWrapper .list.list1{
+    animation-delay: -15s;
+}
+
+.coPilot{
+    width: 90%;
+    margin: auto;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+.coPilot .left{
+    margin: 50px 30px;
+}
+
+.coPilot .left .new p{
+    position: relative;
+    height: 40px;
+    width: 90px;
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 15px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 20px;
+}
+
+.coPilot .left .new p::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+
+.coPilot .right{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 100%;
+}
+
+.coPilot .right .chat{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.coPilot .right .chat .userChat{
+    display: block;
+    width: 250px;
+    border-radius: 8px;
+    color: #ffffff;
+    margin: 50px 0 50px 70px;
+    padding: 20px 20px 20px 10px;
+    background-color: #082c4c;
+    line-height: 22px;
+}
+
+.coPilot .right .chat .response{
+    position: relative;
+    width: 300px;
+    border-radius: 8px;
+    color: #ffffff;
+    margin: 0 50px 0 0;
+    padding: 20px;
+    background-color: #28343c;
+}
+.coPilot .right .fadeBlur{
+    position: relative;
+    height: 500px;
+    margin: 30px 60px;
+    mask-image: linear-gradient(180deg ,transparent , rgba(0,0,0,0.5) 10% , black 90% ,transparent);
+}
+
+.coPilot .right .fadeBlur .fade1{
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+.coPilot .right .fadeBlur .fade2{
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.coPilot .right .codeSnippet{
+    height: 100%;
+    z-index: 0;
+}
+
+
+
+.coPilot .right .chat .response img{
+    height: 130px;
+    margin: 20px 10px 0 10px;
+}
+
+.coPilot .right .chat .response::before{
+    content: "Copilot";
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.coPilot .right .chat .response::after{
+    content: "Copilot is typing...";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    color: var(--faded-white);
+}
+
+/* Productivity */
+
+.productivity,.deployment,.extension{
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    overflow: hidden;
+}   
+
+.productivity .left,.deployment .right,.extension .left{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.productivity .left img ,.deployment .right img{
+    position: relative;
+    height: 380px;
+    border-radius: 12px;
+    margin-left: 50px;
+}
+
+.productivity .left::before{
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 20px;
+    top: 25%;
+    left: 50px;
+    background-color: var(--primary-color);
+    filter: blur(30px);
+    z-index: -1;
+}
+
+.productivity .right,.deployment .left,.extension .right,.extension .left{
+    margin: 0 50px;
+}
+
+.productivity .right h1, .deployment .left h1, .extension .right h1{
+    padding-bottom: 10px;
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.innerWrapper{
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+.innerWrapper h2{
+    padding: 10px 0;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.innerWrapper a{
+    padding: 10px 0;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.extension .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    mask-image: linear-gradient(90deg ,transparent , rgba(0,0,0,0.5) 10% , black 90% ,transparent);
+}
+
+.extension .left .row{
+    display: flex;
+    gap: 10px;
+}
+.extension .left .row .extensionWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    gap: 20px;
+    padding: 10px;
+}
+
+.extension .left .row .extensionWrapper .info span{
+    font-size: 18px;
+    color: #ffffffa2;
+    font-weight: 600;
+}
+
+.extension .left .row .extensionWrapper .info p{
+    padding-top: 10px;
+    font-size: 15px;
+    color: #ffffffa2;
+}
+
+.extension .left .row2{
+    position: relative;
+    left: 50px;
+}
+
+.extension .left .row3{
+    position: relative;
+    right: 50px;
+}
+
+.testimonials{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+.testimonials h1{
+    text-align: center;
+    margin: 10px;
+}
+.testimonial p{
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+.testimonial span{
+    color: var(--faded-white);
+}
+.twitts{
+    margin: 10px auto;
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    mask-image: linear-gradient(180deg ,transparent , rgba(0,0,0,0.5) 20% , black 50% ,transparent);
+}
+
+.twitts .col{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.twitts .col.col1{
+    position: relative;
+    top: -50px;
+}
+.twitts .col.col3{
+    position: relative;
+    bottom: -50px;
+}
+.twitts .col .testimonial{
+    width: 400px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.twitts .col .testimonial .attribution{
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+}
+
+.separator {
+    background: #000A12;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    margin: 50px 0;
+}
+  
+.separator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: -2;
+    border-radius: 50%;
+    box-shadow: 0px -10px 12px 0px rgba(0, 101, 184, 0.6);
+} 
+
+.secondaryCTA{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondaryCTA h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.secondCTA{
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+}
+
+footer .linkWrapper{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    color: var(--faded-white);
+}
+
+footer .linkWrapper ul li:first-child{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer .linkWrapper ul li{
+    width: 100%;
+    margin: 10px 0;
+}
+
+footer .copyright{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+footer .copyright a,.linkWrapper ul li a{
+    display: block;
+    width: 100%;
+    color: var(--faded-white);
+}
+
+footer .copyright a:hover,.linkWrapper ul li a:hover{
+    color: #ffffff;
+}
+
+.twitter{
+    height: 45px;
+    max-width: 400px;
+    width: 40vmax;
+    border-radius: 3px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twitter p{
+    padding: 0 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.twitter span{
+    font-weight: 200;
+    padding: 0 0 0 5px;
+}
+
+
+.twitter i{
+    cursor: pointer;
+    padding: 0 10px;
+}
+.twitter i:hover{
+    scale: 1.2;
+    color: #7581c1;
+}
+
+
+/* for large tablets */
+@media only screen 
+  and (max-width: 990px) { 
+    .navbar{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(0,0,0);
+        display: flex;
+        align-items: center;
+        padding: 0 50px;
+        overflow-y: hidden;
+        transition: 1s left cubic-bezier(0.645, 0.045, 0.355, 1);      
+    }
+    .active .navbar{
+        left: 0;    
+    }
+    .mobile-navbar-btn .active #mobile-navbar-icon[name="cross"]{
+        display: block;
+    }
+
+    .mobile-navbar-btn .active #mobile-navbar-icon[name="bars"]{
+        display: none;
+    }
+
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+    }
+    .navbar ul{
+        width: 100%;
+        font-size: 4rem;
+        gap: 1rem;
+        flex-direction: column;
+        font-weight: 800;
+    }
+    .navbar ul li a{
+        display: block;
+        width: 100%;
+    }
+
+    .hero .left h1,.coPilot .left h1,.testimonials h1{
+        font-size: 2rem;
+    }
+    .hero .right .heroMockUp .copilotUI{
+        height: 150px;
+        bottom: 15%;
+    }
+    .hero .right .heroMockUp .heroMockUpUI{
+        height: 300px;
+    }
+    .hero .left p,.coPilot .left p,.productivity .right p,.deployment .left p,.extension .right p , .testimonials p{
+        font-size: 0.95rem;
+    }
+    .coPilot .right{
+        height: 600px;
+    }
+    .coPilot .right .chat{
+        top: 5%;
+    }
+    .coPilot .right .fadeBlur{
+        left: 25%;
+    }
+    .productivity .left img ,.deployment .right img{
+        height: 230px;
+        margin: 30px;
+    }
+    .productivity .right h1, .deployment .left h1, .extension .right h1{
+        font-size: 2rem;
+    }
+    .productivity,.deployment,.extension,.coPilot{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin: 50px auto;
+    }
+    .deployment,.coPilot{
+        flex-direction: column;
+    }
+    .twitts .col .testimonial{
+        width: 300px;
+    }
+    footer .linkWrapper .logo{
+        display: none;
+    }
+} 
+
+
+@media only screen
+  and (max-width: 768px){ 
+    .hero{
+        padding-top: 10rem;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hero .right .heroMockUp{
+        height: auto;
+    }
+    header .CTA ,header .search{
+        display: none;
+    }
+    .hero .right{
+        margin: 0 auto;
+    }   
+    footer .linkWrapper{
+        display: none;
+    } 
+    footer .twitter{
+        position: relative;
+    }
+    .coPilot .right .chat .userChat{
+        width: 200px;
+    }
+    .coPilot .right .chat .response{
+        width: 250px;
+    }
+    .coPilot .right .chat .response img{
+        left: 0;
+        width: 200px;
+        object-fit: contain;
+    }
+    .coPilot .right{
+        height: 600px;
+    }
+    .coPilot .right .chat{
+        top: 7%;
+        left: 10%;
+    }
+    .coPilot .right .fadeBlur{
+        left: 25%;
+    }
+} 
+
+@media only screen
+  and (max-width: 481px){
+    .navbar ul{
+        font-size: 2.5rem;
+        gap: 1rem;
+    }
+    .hero .left{
+        padding-left: 20px;
+    }
+    .hero .right .heroMockUp .copilotUI{
+        height: 100px;
+        bottom: 15%;
+    }
+    .hero .right .heroMockUp .heroMockUpUI{
+        height: 220px;
+    }
+    .coPilot .right .fadeBlur{
+        display: none;
+    }
+    .coPilot .right .chat{
+        top:0;
+    }
+    .productivity .left img, .deployment .right img {
+        height: 150px;
+        margin: 30px;
+    }
+    .extension .left{
+        margin: 10px auto;
+        overflow: hidden;
+    }
+    .extension .left .row .extensionWrapper .info span{
+        font-size: 1rem;
+    }
+    .extension .left p{
+        display: none;
+    }
+    footer .copyright .policies{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    footer .copyright{
+        font-size: 0.7rem;
+        flex-direction: column-reverse;
+    }
+    .twitter{
+        width: 48vmax;
+    }    
+}
