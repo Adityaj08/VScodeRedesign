@@ -138,7 +138,6 @@ header .navbar{
     height: 50px;
     width: 150px;
     font-size: 15px;
-    margin: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -734,16 +733,16 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
   and (max-width: 768px){ 
     .hero{
         padding-top: 10rem;
-        padding-bottom: 150px;
-        height: 100vh;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        overflow-x: hidden;
     }
     .hero .right .heroMockUp{
         height: auto;
+        width: 80%;
+        object-fit: contain;
     }
     header .CTA ,header .search{
         display: none;
@@ -787,7 +786,7 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
         gap: 1rem;
     }
     .hero .left{
-        padding-left: 20px;
+        padding: 20px;
     }
     .hero .right .heroMockUp .copilotUI{
         height: 100px;
@@ -802,12 +801,20 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
     .coPilot .right .chat{
         top:0;
     }
+    .coPilot .right .chat .userChat {
+        width: 180px;
+    }
+    .productivity .background{
+        display: none;
+    }
+    .productivity .left::before{
+        height: 100px;
+    }
     .productivity .left img, .deployment .right img {
         height: 150px;
         margin: 30px;
     }
     .extension .left{
-        width:100%;
         margin: 10px auto;
         overflow: hidden;
     }
@@ -828,6 +835,6 @@ footer .copyright a:hover,.linkWrapper ul li a:hover{
         flex-direction: column-reverse;
     }
     .twitter{
-        width: 48vmax;
+        width: 46vmax;
     }    
 }
